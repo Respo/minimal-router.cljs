@@ -1,0 +1,22 @@
+{
+  "name": "minimal-router",
+  "version": "0.1.0",
+  "description": "Router example for Respo",
+  "main": "index.js",
+  "repository": "git@github.com:Respo/minimal-router.git",
+  "author": "jiyinyiyong <jiyinyiyong@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "compile": "shadow-cljs compile app",
+    "build": "mkdir -p target && yarn del && yarn compile && yarn serve",
+    "watch": "shadow-cljs watch app",
+    "html": "cp assets/index.html target/",
+    "serve": "http-server target/",
+    "dev": "yarn html && http-server target/",
+    "del": "rm -fr target/*"
+  },
+  "dependencies": {
+    "http-server": "^0.10.0",
+    "shadow-cljs": "^0.18.7"
+  }
+}
