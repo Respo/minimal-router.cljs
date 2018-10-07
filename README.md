@@ -2,7 +2,7 @@
 Minimal [Respo Router](https://github.com/Respo/respo-router/) example
 ---
 
-Demo http://repo.respo.site/minimal-router/#/
+Demo http://repo.respo-mvc.org/minimal-router/#/
 
 Check out [main.cljs](https://github.com/Respo/minimal-router/blob/master/src/app/main.cljs) for details.
 
