@@ -4,7 +4,8 @@
             [clojure.string :as string]
             [respo-router.core :refer [render-url!]]
             [app.comp.container :refer [comp-container]]
-            [respo-router.util.listener :refer [listen! parse-address]]))
+            [respo-router.parser :refer [parse-address]]
+            [respo-router.listener :refer [listen!]]))
 
 ; using hash for convenience
 (def router-mode :hash)
@@ -53,8 +54,6 @@
   ; watch updates and render address
   (add-watch *store :router-changes render-router!)
   (println "app started!"))
-
-(set! (.-onload js/window) main!)
 
 (defn reload! []
   (clear-cache!)

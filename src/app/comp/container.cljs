@@ -1,7 +1,7 @@
 
 (ns app.comp.container
-  (:require-macros [respo.macros :refer [defcomp div span <>]])
-  (:require [respo-ui.style :as ui]
+  (:require-macros [respo.core :refer [defcomp div span <>]])
+  (:require [respo-ui.core :as ui]
             [respo.core :refer [create-comp]]
             [app.comp.sidebar :refer [comp-sidebar]]))
 

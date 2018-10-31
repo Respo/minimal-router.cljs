@@ -1,7 +1,7 @@
 
 (ns app.comp.sidebar
-  (:require-macros [respo.macros :refer [defcomp div span <>]])
-  (:require [respo-ui.style :as ui]
+  (:require-macros [respo.core :refer [defcomp div span <>]])
+  (:require [respo-ui.core :as ui]
             [respo.core :refer [create-comp]]))
 
 (defn on-route [path]
@@ -12,17 +12,17 @@
   (div {}
     (div {}
       (div {:style ui/button
-            :event {:click (on-route "/")}}
+            :on-click (on-route "/")}
         (<> "/")))
     (div {}
       (div {:style ui/button
-            :event {:click (on-route "/about")}}
+            :on-click (on-route "/about")}
         (<> "/about")))
     (div {}
       (div {:style ui/button
-            :event {:click (on-route "/post/a")}}
+            :on-click (on-route "/post/a")}
         (<> "/post/a")))
     (div {}
       (div {:style ui/button
-            :event {:click (on-route "/post/b")}}
+            :on-click (on-route "/post/b")}
         (<> "/post/b")))))
